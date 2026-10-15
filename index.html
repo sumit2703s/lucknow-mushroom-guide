@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lucknow ke best cafes, restaurants aur hotels jahan mushrooms ka premium use hota hai. B2B supply leads aur gourmet dining guide — sab ek jagah.">
+  <meta name="keywords" content="Lucknow mushroom, mushroom restaurant Lucknow, mushroom cafe, mushroom supply Lucknow, B2B mushroom, Awadhi mushroom dishes">
+  <title>🍄 Lucknow Mushroom Guide — Cafes, Restaurants & Hotels</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍄</text></svg>">
+</head>
+<body>
+
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="preloader-icon">
+      <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="35" cy="35" r="32" stroke="url(#goldGrad)" stroke-width="2" opacity="0.3"/>
+        <path d="M35 10C35 10 15 25 15 38C15 51 24 55 35 55C46 55 55 51 55 38C55 25 35 10 35 10Z" fill="url(#goldGrad)" opacity="0.8"/>
+        <rect x="32" y="50" width="6" height="15" rx="3" fill="url(#goldGrad)" opacity="0.6"/>
+        <defs>
+          <linearGradient id="goldGrad" x1="0" y1="0" x2="70" y2="70">
+            <stop offset="0%" stop-color="#d4a574"/>
+            <stop offset="50%" stop-color="#b8860b"/>
+            <stop offset="100%" stop-color="#daa520"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+    <div class="preloader-text">Lucknow Mushroom Guide</div>
+    <div class="preloader-bar"></div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 3C18 3 6 14 6 22C6 30 11 33 18 33C25 33 30 30 30 22C30 14 18 3 18 3Z" fill="url(#navGold)" opacity="0.85"/>
+        <rect x="16" y="29" width="4" height="7" rx="2" fill="url(#navGold)" opacity="0.6"/>
+        <defs>
+          <linearGradient id="navGold" x1="6" y1="3" x2="30" y2="33">
+            <stop offset="0%" stop-color="#d4a574"/>
+            <stop offset="100%" stop-color="#b8860b"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div>
+        <span class="nav-brand-text">Mushroom Guide</span>
+        <span class="nav-brand-sub">Lucknow Edition</span>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn nav-btn-scan" id="scanBtnNav" onclick="scanLucknow()" title="Scan Lucknow for New Venues">
+        <span class="scan-pulse-dot"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/><polyline points="21 3 21 9 15 9"/></svg>
+        <span>Scan Lucknow</span>
+      </button>
+      <button class="nav-btn" id="calcToggleBtn" style="display: none;" title="Revenue Calculator">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+        <span>Calculator</span>
+      </button>
+      <button class="nav-btn nav-btn-primary" onclick="exportToCSV()" title="Export CSV">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        <span>Export</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="assets/hero.jpg" alt="Gourmet mushroom dish in luxury Lucknow setting" loading="eager">
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Lucknow's #1 Mushroom Intelligence Platform
+      </div>
+      <h1>
+        Discover Where <span>Mushrooms</span> Rule Lucknow's Food Scene
+      </h1>
+      <p class="hero-desc">
+        Cafes, restaurants aur luxury hotels — janiye kaun 50 kg se 120+ kg mushrooms weekly use karta hai. B2B supply leads se lekar gourmet dishes tak — sab ek jagah.
+      </p>
+      <div class="hero-cta-group">
+        <button class="btn btn-gold" onclick="scrollToVenues()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Explore Venues
+        </button>
+        <button class="btn btn-scan-cta" id="heroScanBtn" onclick="scanLucknow()">
+          <span class="scan-cta-blip"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/><polyline points="21 3 21 9 15 9"/></svg>
+          Scan & Add New Venues
+        </button>
+        <button class="btn btn-outline" onclick="exportToCSV()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CSV Report
+        </button>
+      </div>
+    </div>
+
+    <!-- Floating Stats -->
+    <div class="hero-floating-stats">
+      <div class="hero-stat-card">
+        <div class="hero-stat-value">32+</div>
+        <div class="hero-stat-label">Premium Venues Tracked</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-value">1,600+ kg</div>
+        <div class="hero-stat-label">Weekly Mushroom Demand</div>
+      </div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-value">₹11.5L+</div>
+        <div class="hero-stat-label">Monthly Revenue Potential</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS TICKER ===== -->
+  <div class="stats-ticker">
+    <div class="stats-ticker-inner">
+      <div class="ticker-item">
+        <div class="ticker-icon gold">🏨</div>
+        <div>
+          <div class="ticker-value"><span class="counter-value" data-target="9">0</span></div>
+          <div class="ticker-label">Luxury Hotels</div>
+        </div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-icon ruby">🍽️</div>
+        <div>
+          <div class="ticker-value"><span class="counter-value" data-target="12">0</span></div>
+          <div class="ticker-label">Fine Dining Restaurants</div>
+        </div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-icon sapphire">☕</div>
+        <div>
+          <div class="ticker-value"><span class="counter-value" data-target="11">0</span></div>
+          <div class="ticker-label">Cafes & Bistros</div>
+        </div>
+      </div>
+      <div class="ticker-item">
+        <div class="ticker-icon emerald">📊</div>
+        <div>
+          <div class="ticker-value"><span class="counter-value" data-target="1620" data-suffix=" kg">0</span></div>
+          <div class="ticker-label">Weekly Total Demand</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== MODE SWITCHER ===== -->
+  <section class="mode-section" id="venues-section">
+    <div class="section-header">
+      <div class="section-tag">Choose Your Mode</div>
+      <h2 class="section-title">Explore as <span>Supplier</span> or <span>Foodie</span></h2>
+      <p class="section-desc">B2B mode me weekly demand, revenue aur procurement details dekho. Foodie mode me signature dishes aur dining experience explore karo.</p>
+    </div>
+
+    <div class="mode-toggle-wrapper">
+      <div class="mode-toggle">
+        <button class="mode-btn active" data-mode="foodie">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          🍴 Gourmet Foodie
+        </button>
+        <button class="mode-btn" data-mode="b2b">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+          📊 B2B Supplier Radar
+        </button>
+        <div class="mode-slider"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIVE SCANNER ACTION BANNER ===== -->
+  <div class="scanner-banner-container">
+    <div class="scanner-banner">
+      <div class="scanner-banner-left">
+        <div class="live-indicator">
+          <span class="live-dot"></span>
+          <span class="live-text">LUCKNOW RADAR ACTIVE</span>
+        </div>
+        <div class="scanner-banner-info">
+          <h4>🛰️ Scan Lucknow & Discover New Places</h4>
+          <p>Click karke pure Lucknow ka real-time data dobara check karein — naye khule cafes, restaurants aur hotel procurement leads auto-detect karein!</p>
+        </div>
+      </div>
+      <div class="scanner-banner-right">
+        <button class="btn-scan-main" id="scanBtn" onclick="scanLucknow()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/><polyline points="21 3 21 9 15 9"/></svg>
+          <span>Scan Lucknow (Discover New)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FILTERS BAR ===== -->
+  <div class="filters-bar" id="filtersBar">
+    <!-- Rendered by JS -->
+  </div>
+
+  <!-- ===== RESULTS BAR ===== -->
+  <div class="results-bar">
+    <span id="resultsCount" class="results-count">Loading...</span>
+    <select id="sortSelect" class="sort-select">
+      <option value="rating">Sort: ⭐ Rating</option>
+      <option value="newest">Sort: 🔥 Newly Discovered</option>
+      <option value="weekly">Sort: 📦 Weekly Demand</option>
+      <option value="name">Sort: 🔤 Name A-Z</option>
+    </select>
+  </div>
+
+  <!-- ===== VENUE CARDS GRID ===== -->
+  <div class="venues-grid" id="venuesGrid">
+    <!-- Rendered by JS -->
+  </div>
+
+  <!-- ===== CALCULATOR PANEL (B2B) ===== -->
+  <div class="calc-panel">
+    <div class="calc-header">
+      <h3 class="calc-title">🧮 Mushroom <span>Supply Revenue Calculator</span></h3>
+      <button class="calc-close" id="calcClose">✕</button>
+    </div>
+
+    <div class="calc-price-input">
+      <label>💰 Aapka Price Per Kg (₹):</label>
+      <input type="number" id="pricePerKg" value="180" min="50" max="1000" step="10">
+      <span style="font-size: 0.75rem; color: var(--text-muted);">* Button mushroom avg ₹120-200/kg, Oyster ₹200-350/kg, Shiitake ₹500-800/kg</span>
+    </div>
+
+    <div class="calc-grid">
+      <div class="calc-stat-box">
+        <div class="calc-stat-value" id="calcSelectedCount">0</div>
+        <div class="calc-stat-label">Venues Selected</div>
+      </div>
+      <div class="calc-stat-box">
+        <div class="calc-stat-value" id="calcWeeklyDemand">0 kg</div>
+        <div class="calc-stat-label">Total Weekly Demand</div>
+      </div>
+      <div class="calc-stat-box">
+        <div class="calc-stat-value" id="calcMonthlyDemand">0 kg</div>
+        <div class="calc-stat-label">Total Monthly Demand</div>
+      </div>
+      <div class="calc-stat-box highlight">
+        <div class="calc-stat-value" id="calcMonthlyRevenue">₹0</div>
+        <div class="calc-stat-label">💰 Est. Monthly Revenue</div>
+      </div>
+    </div>
+
+    <div id="calcSelectedList" class="calc-selected-list">
+      <span style="font-size: 0.8rem; color: var(--text-muted);">Card pe ✓ click karke venues select karo ↑</span>
+    </div>
+
+    <div class="calc-actions">
+      <button class="btn btn-gold" onclick="exportToCSV()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Export Selected as CSV
+      </button>
+      <button class="btn btn-outline" onclick="window.print()">
+        🖨️ Print Report
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p class="footer-text">
+      Built with 🍄 for Lucknow's Mushroom Ecosystem — <a href="#hero">Lucknow Mushroom Guide</a>
+    </p>
+    <p class="footer-disclaimer">
+      * Consumption estimates are based on industry research & venue capacity analysis. Actual figures may vary. Revenue figures are illustrative, based on your entered price/kg.
+    </p>
+  </footer>
+
+  <!-- ===== VENUE DETAIL MODAL ===== -->
+  <div id="venueDetailOverlay" class="venue-modal-overlay" onclick="closeVenueDetail(event)">
+    <div class="venue-detail-modal" id="venueDetailModal" onclick="event.stopPropagation()">
+      <button class="modal-close-btn" onclick="closeVenueDetail()" title="Close details (Esc)">✕</button>
+      <div id="venueModalContent">
+        <!-- Injected dynamically via openVenueDetail() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SCAN OVERLAY & RADAR MODAL ===== -->
+  <div id="scanOverlay" class="scan-overlay">
+    <div class="scan-modal">
+      <div class="scan-radar-container">
+        <div class="scan-radar-circle circle-1"></div>
+        <div class="scan-radar-circle circle-2"></div>
+        <div class="scan-radar-circle circle-3"></div>
+        <div class="scan-radar-cross-h"></div>
+        <div class="scan-radar-cross-v"></div>
+        <div class="scan-radar-sweep"></div>
+        <div class="scan-blip blip-1"></div>
+        <div class="scan-blip blip-2"></div>
+        <div class="scan-blip blip-3"></div>
+        <div class="scan-blip blip-4"></div>
+        <div class="scan-radar-center">🍄</div>
+      </div>
+
+      <div class="scan-hud-badge">LUCKNOW MUSHROOM RADAR v2.5</div>
+      <h3 class="scan-title">Deep Scanning Lucknow Food Ecosystem...</h3>
+      <p class="scan-status">Lucknow ke naye cafes, restaurants aur hotels scan ho rahe hain...</p>
+      
+      <div class="scan-progress-box">
+        <div class="scan-progress-bar">
+          <div class="scan-progress-fill" id="scanProgressFill"></div>
+        </div>
+        <div class="scan-progress-labels">
+          <span id="scanPercent">0%</span>
+          <span id="scanLocalityCount">Scanning 16 Lucknow Localities</span>
+        </div>
+      </div>
+
+      <div class="scan-localities-stream" id="scanLocalitiesStream">
+        <span class="scan-tag active">Hazratganj</span>
+        <span class="scan-tag active">Gomti Nagar</span>
+        <span class="scan-tag active">Aminabad</span>
+        <span class="scan-tag">Chowk</span>
+        <span class="scan-tag">Aliganj</span>
+        <span class="scan-tag">Alambagh</span>
+        <span class="scan-tag">Shaheed Path</span>
+        <span class="scan-tag">Indira Nagar</span>
+        <span class="scan-tag">Charbagh</span>
+        <span class="scan-tag">Mahanagar</span>
+        <span class="scan-tag">Rajajipuram</span>
+        <span class="scan-tag">Jankipuram</span>
+        <span class="scan-tag">Sushant Golf City</span>
+        <span class="scan-tag">Chinhat</span>
+        <span class="scan-tag">Phoenix Palassio</span>
+        <span class="scan-tag">Vrindavan Yojna</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
